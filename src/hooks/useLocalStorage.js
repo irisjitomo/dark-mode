@@ -7,7 +7,7 @@ export const useLocalStorage = (key, initialValue) => {
         // Parse and return stored json or, if undefined, return initialValue
         return item ? JSON.parse(item) : initialValue      
     })
-    
+
     const setValue = (value) => {
         // Save State
         setStoredValue(value)
@@ -15,5 +15,5 @@ export const useLocalStorage = (key, initialValue) => {
         window.localStorage.setItem(key, JSON.stringify(value));
     }
 
-    return [storedValue, setValue]
+    return [storedValue, setValue] 
 }
